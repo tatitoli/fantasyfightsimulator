@@ -108,7 +108,7 @@ public class GameDaoImp implements GameDao {
 		jaxbMarshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
 
 		jaxbMarshaller.marshal( games, new File( System.getProperty("user.home"), "actualGame.xml" ) );
-		jaxbMarshaller.marshal( games, System.out );
+//		jaxbMarshaller.marshal( games, System.out );
 	}
 
 	@Override
@@ -118,7 +118,7 @@ public class GameDaoImp implements GameDao {
 		jaxbMarshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
 
 		jaxbMarshaller.marshal( games, new File( System.getProperty("user.home"), "game.xml" ) );
-		jaxbMarshaller.marshal( games, System.out );
+//		jaxbMarshaller.marshal( games, System.out );
 	}
 	
 	@Override
@@ -128,7 +128,7 @@ public class GameDaoImp implements GameDao {
 		jaxbMarshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
 
 		jaxbMarshaller.marshal( games, new File( System.getProperty("user.home"), fileName ) );
-		jaxbMarshaller.marshal( games, System.out );
+//		jaxbMarshaller.marshal( games, System.out );
 	}
 
 	@Override
@@ -178,6 +178,6 @@ public class GameDaoImp implements GameDao {
 		jaxbMarshaller.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, true );
 
 		jaxbMarshaller.marshal( games, new File( System.getProperty("user.home"), fileName ) );
-		jaxbMarshaller.marshal( games, System.out );
+//		jaxbMarshaller.marshal( games, System.out );
 	}
 }

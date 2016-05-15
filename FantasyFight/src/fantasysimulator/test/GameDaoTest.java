@@ -3,6 +3,8 @@ package fantasysimulator.test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
+import java.util.List;
+
 import javax.xml.bind.JAXBException;
 
 import org.junit.After;
@@ -19,6 +21,7 @@ import fantasysimulator.pojo.Players;
 
 public class GameDaoTest {
 
+	List<Player> turnPlayers;
 	Games games = new Games();
 	Game game = new Game();
 	Players players = new Players();
@@ -122,5 +125,12 @@ public class GameDaoTest {
 	public void testGameById(){
 		assertEquals(gameDaoImp.getGameById("0", games).equals(game), true);
 		assertEquals(gameDaoImp.getGameById("1", games).equals(game), false);
+	}
+	
+	@Test
+	public void testTurnPlayers(){
+		turnPlayers = gameDaoImp.makeTurnPlayers(player, playerTwo);
+		assertEquals(turnPlayers.get(0).equals(player), true);
+		assertEquals(turnPlayers.get(0).equals(playerTwo), false);
 	}
 }
