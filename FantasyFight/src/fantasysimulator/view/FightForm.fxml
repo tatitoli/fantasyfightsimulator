@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fantasysimulator.view.FightController">
+   <children>
+      <GridPane layoutX="23.0" layoutY="69.0" prefHeight="113.0" prefWidth="753.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="192.0" text="Karakter/Játékos neve" />
+            <Label text="Karakter/Játékos neve" GridPane.columnIndex="3" />
+            <Label text="Aktuális életerő" GridPane.rowIndex="1" />
+            <Label text="Mozgáspont" GridPane.rowIndex="2" />
+            <Label text="Támadó érték" GridPane.rowIndex="3" />
+            <Label text="Védő érték" GridPane.rowIndex="4" />
+            <Label text="Aktuális életerő" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label text="Mozgáspont" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label text="Támadó érték" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label text="Védő érték" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label fx:id="hpOne" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="mpOne" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="hpTwo" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Label fx:id="mpTwo" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Label fx:id="attackOne" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="defenseOne" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="attackTwo" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Label fx:id="defenseTwo" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Label fx:id="nameOne" text="Label" GridPane.columnIndex="1" />
+            <Label fx:id="nameTwo" text="Label" GridPane.columnIndex="4" />
+            <Label fx:id="hitTargetOne" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Találati esély" GridPane.rowIndex="5" />
+            <Label text="Kritikus találati esély" GridPane.rowIndex="6" />
+            <Label fx:id="hitCriticTargetOne" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Találati esély" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Label fx:id="hitTargetTwo" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Label text="Kritikus találati esély" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Label fx:id="hitCriticTargetTwo" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <Button fx:id="startButton" alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="371.0" mnemonicParsing="false" onAction="#midButton" prefHeight="30.0" prefWidth="100.0" text="Start" />
+      <Label layoutX="23.0" layoutY="29.0" prefHeight="34.0" prefWidth="292.0" text="1. Játékos" textAlignment="CENTER">
+         <font>
+            <Font name="Bauhaus 93" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="476.0" layoutY="29.0" prefHeight="34.0" prefWidth="292.0" text="2. Játékos" textAlignment="CENTER">
+         <font>
+            <Font name="Bauhaus 93" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="rollNumber" alignment="CENTER" contentDisplay="CENTER" layoutX="338.0" layoutY="229.0" prefHeight="125.0" prefWidth="125.0" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="56.0" />
+         </font>
+      </Label>
+      <Label fx:id="message" alignment="CENTER" contentDisplay="CENTER" layoutX="264.0" layoutY="180.0" prefHeight="50.0" prefWidth="273.0">
+         <font>
+            <Font name="Bauhaus 93" size="20.0" />
+         </font></Label>
+      <Button fx:id="rollOne" layoutX="119.0" layoutY="290.0" mnemonicParsing="false" onAction="#rollOne" prefHeight="30.0" prefWidth="100.0" text="Dobás" />
+      <Button fx:id="rollTwo" layoutX="572.0" layoutY="290.0" mnemonicParsing="false" onAction="#rollTwo" prefHeight="30.0" prefWidth="100.0" text="Dobás" />
+      <Label fx:id="messageOne" alignment="CENTER" contentDisplay="CENTER" layoutX="94.0" layoutY="205.0" prefHeight="50.0" prefWidth="150.0" textAlignment="CENTER">
+         <font>
+            <Font name="Bauhaus 93" size="24.0" />
+         </font></Label>
+      <Label fx:id="messageTwo" alignment="CENTER" contentDisplay="CENTER" layoutX="547.0" layoutY="204.0" prefHeight="50.0" prefWidth="150.0" textAlignment="CENTER">
+         <font>
+            <Font name="Bauhaus 93" size="24.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fantasysimulator.view.CharMakerController">
+   <children>
+      <GridPane layoutX="23.0" layoutY="69.0" prefHeight="285.0" prefWidth="753.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="192.0" text="Karakter/Játékos neve" />
+            <Label text="Faj" GridPane.rowIndex="1" />
+            <Label text="Erő" GridPane.rowIndex="3" />
+            <Label text="Ügyesség" GridPane.rowIndex="4" />
+            <Label text="Karakter/Játékos neve" GridPane.columnIndex="3" />
+            <Label text="Faj" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label text="Életerő" GridPane.rowIndex="5" />
+            <Label text="Mozgáspont" GridPane.rowIndex="6" />
+            <Label text="Támadó érték" GridPane.rowIndex="7" />
+            <Label text="Védő érték" GridPane.rowIndex="8" />
+            <Label text="Erő" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label text="Ügyesség" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label text="Életerő" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Label text="Mozgáspont" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Label text="Támadó érték" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <Label text="Védő érték" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <TextField fx:id="nameOne" prefHeight="25.0" prefWidth="140.0" GridPane.columnIndex="1" />
+            <TextField fx:id="nameTwo" GridPane.columnIndex="4" />
+            <Label fx:id="hpOne" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="mpOne" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="hpTwo" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Label fx:id="mpTwo" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <Label text="Kiosztható pontok" GridPane.rowIndex="2" />
+            <Label fx:id="hasPointsOne" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Kiosztható pontok" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label fx:id="hasPointsTwo" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <ComboBox fx:id="raceOne" onAction="#raceOneAction" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="raceTwo" onAction="#raceTwoAction" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button fx:id="strOneMinus" mnemonicParsing="false" onAction="#strOneMinus" prefHeight="25.0" prefWidth="26.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="strOnePlus" mnemonicParsing="false" onAction="#strOnePlus" prefHeight="25.0" prefWidth="26.0" text="+" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="126.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="strOne" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="26.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="dexOneMinus" mnemonicParsing="false" onAction="#dexOneMinus" prefHeight="25.0" prefWidth="26.0" text="-" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="dexOne" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="26.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="dexOnePlus" mnemonicParsing="false" onAction="#dexOnePlus" prefHeight="25.0" prefWidth="26.0" text="+" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="125.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="strTwoMinus" mnemonicParsing="false" onAction="#strTwoMinus" prefHeight="25.0" prefWidth="26.0" text="-" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Button fx:id="strTwo" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="26.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="strTwoPlus" mnemonicParsing="false" onAction="#strTwoPlus" prefHeight="25.0" prefWidth="26.0" text="+" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="124.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="dexTwoMinus" mnemonicParsing="false" onAction="#dexTwoMinus" prefHeight="25.0" prefWidth="26.0" text="-" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Button fx:id="dexTwo" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="26.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="dexTwoPlus" mnemonicParsing="false" onAction="#dexTwoPlus" prefHeight="25.0" prefWidth="26.0" text="+" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="124.0" />
+               </GridPane.margin>
+            </Button>
+            <Label fx:id="attackOne" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label fx:id="defenseOne" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label fx:id="attackTwo" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <Label fx:id="defenseTwo" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+         </children>
+      </GridPane>
+      <Button fx:id="nextButton" layoutX="350.0" layoutY="354.0" mnemonicParsing="false" onAction="#nextButtonAction" prefHeight="30.0" prefWidth="100.0" text="Tovább" />
+      <Label layoutX="23.0" layoutY="29.0" prefHeight="34.0" prefWidth="292.0" text="1. Játékos" textAlignment="CENTER">
+         <font>
+            <Font name="Bauhaus 93" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="476.0" layoutY="29.0" prefHeight="34.0" prefWidth="292.0" text="2. Játékos" textAlignment="CENTER">
+         <font>
+            <Font name="Bauhaus 93" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

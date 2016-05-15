@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fantasysimulator.view.ScoresController">
+   <children>
+      <SplitPane dividerPositions="0.36716791979949875" prefHeight="400.0" prefWidth="800.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="400.0">
+               <children>
+                  <TableView fx:id="gameTable" prefHeight="400.0" prefWidth="290.0">
+                    <columns>
+                      <TableColumn fx:id="playerOneOszlop" prefWidth="91.0" text="1. Játékos" />
+                      <TableColumn fx:id="playerTwoOszlop" prefWidth="83.0" text="2. Játékos" />
+                        <TableColumn fx:id="whoWhin" prefWidth="115.0" text="Győztes" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <GridPane prefHeight="320.0" prefWidth="502.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="70.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="70.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="192.0" text="Karakter/Játékos neve" />
+                  <Label text="Karakter/Játékos neve" GridPane.columnIndex="3" />
+                  <Label text="Életerő" GridPane.rowIndex="1" />
+                  <Label text="Mozgáspont" GridPane.rowIndex="2" />
+                  <Label text="Támadó érték" GridPane.rowIndex="3" />
+                  <Label text="Védő érték" GridPane.rowIndex="4" />
+                  <Label text="Életerő" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label text="Mozgáspont" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label text="Támadó érték" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Label text="Védő érték" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Label fx:id="hpOne" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="mpOne" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="hpTwo" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Label fx:id="mpTwo" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Label fx:id="attackOne" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="defenseOne" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label fx:id="attackTwo" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <Label fx:id="defenseTwo" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                  <Label fx:id="nameOne" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="hitTargetOne" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label text="Találati esély" GridPane.rowIndex="5" />
+                  <Label text="Kritikus találati esély" GridPane.rowIndex="6" />
+                  <Label fx:id="hitCriticTargetOne" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label text="Találati esély" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                  <Label fx:id="hitTargetTwo" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                  <Label text="Kritikus találati esély" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                  <Label fx:id="hitCriticTargetTwo" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                  <Label fx:id="nameTwo" prefHeight="17.0" prefWidth="64.0" GridPane.columnIndex="4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
