@@ -63,8 +63,9 @@ public class PlayerDaoTest {
 	@Test
 	public void testGetHealthPoints(){
 		assertTrue(player.getCharacter().getHealPoints()>=0);
+		assertEquals(player.getCharacter().getHealPoints()==57, false);
 		assertEquals(player.getCharacter().getHealPoints()==56, true);
-		assertEquals(player.getCharacter().getHealPoints()==15, false);
+		assertEquals(player.getCharacter().getHealPoints()==55, false);
 	}
 	
 	@Test
